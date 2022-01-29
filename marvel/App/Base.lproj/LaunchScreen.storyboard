@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_splash_logo_p2" translatesAutoresizingMaskIntoConstraints="NO" id="DbS-Pe-UDH">
+                                <rect key="frame" x="137" y="420.5" width="140" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="SwA-Bt-Lms"/>
+                                    <constraint firstAttribute="width" constant="140" id="pub-aq-A2Y"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_splash_logo_p1" translatesAutoresizingMaskIntoConstraints="NO" id="0kn-m6-3da">
+                                <rect key="frame" x="137" y="420.5" width="140" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="Lr0-hz-1gU"/>
+                                    <constraint firstAttribute="height" constant="65" id="or6-YU-bgi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="color_bg"/>
+                        <constraints>
+                            <constraint firstItem="0kn-m6-3da" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9DJ-Qo-uOE"/>
+                            <constraint firstItem="DbS-Pe-UDH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Oyq-Nk-iHf"/>
+                            <constraint firstItem="0kn-m6-3da" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="QXJ-x1-2RE"/>
+                            <constraint firstItem="DbS-Pe-UDH" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Vlc-pb-ikd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_splash_logo_p1" width="995" height="447"/>
+        <image name="ic_splash_logo_p2" width="950" height="447"/>
+        <namedColor name="color_bg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

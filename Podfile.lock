@@ -1,0 +1,67 @@
+PODS:
+  - Alamofire (5.5.0)
+  - Kingfisher (7.1.2)
+  - Realm (10.22.0):
+    - Realm/Headers (= 10.22.0)
+  - Realm/Headers (10.22.0)
+  - RealmSwift (10.22.0):
+    - Realm (= 10.22.0)
+  - Runtime (2.2.2)
+  - RxCocoa (6.5.0):
+    - RxRelay (= 6.5.0)
+    - RxSwift (= 6.5.0)
+  - RxRelay (6.5.0):
+    - RxSwift (= 6.5.0)
+  - RxSwift (6.5.0)
+  - SVProgressHUD (2.2.5)
+  - Swinject (2.7.1)
+  - SwinjectAutoregistration (2.8.1):
+    - Swinject (= 2.7.1)
+  - Unrealm (1.9.4):
+    - Realm
+    - RealmSwift
+    - Runtime
+
+DEPENDENCIES:
+  - Alamofire (~> 5.4)
+  - Kingfisher
+  - RealmSwift
+  - RxCocoa
+  - RxSwift
+  - SVProgressHUD
+  - Swinject
+  - SwinjectAutoregistration
+  - Unrealm
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - Realm
+    - RealmSwift
+    - Runtime
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SVProgressHUD
+    - Swinject
+    - SwinjectAutoregistration
+    - Unrealm
+
+SPEC CHECKSUMS:
+  Alamofire: 1c4fb5369c3fe93d2857c780d8bbe09f06f97e7c
+  Kingfisher: 44ed6a8504763f27bab46163adfac83f5deb240c
+  Realm: d9e4e5877095a6722145811f56fe89a531c9659d
+  RealmSwift: e4191b4b957fcfcbed23751ec65eec98f8173ab5
+  Runtime: 67741bd196fb4ad821c4d259ccc527bf734d8806
+  RxCocoa: 94f817b71c07517321eb4f9ad299112ca8af743b
+  RxRelay: 1de1523e604c72b6c68feadedd1af3b1b4d0ecbd
+  RxSwift: 5710a9e6b17f3c3d6e40d6e559b9fa1e813b2ef8
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  Swinject: ddf78b8486dd9b71a667b852cad919ab4484478e
+  SwinjectAutoregistration: e83e362da3ca9c64a68290e89efbc40e378dff12
+  Unrealm: 547a3e1432a86df5cff7b74927a60cc664cc2a0d
+
+PODFILE CHECKSUM: 10f1b32b4c4c7f401f580457865e2c2f1445381b
+
+COCOAPODS: 1.11.2

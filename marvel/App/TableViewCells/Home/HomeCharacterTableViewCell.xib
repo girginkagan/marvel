@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="161" id="KGk-i7-Jjw" customClass="HomeCharacterTableViewCell" customModule="marvel" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="135"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4bb-3J-0pG">
+                        <rect key="frame" x="20" y="5" width="280" height="120"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="94L-So-tGF">
+                                <rect key="frame" x="15" y="10" width="100" height="100"/>
+                                <color key="backgroundColor" name="color_yellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8DG-e2-vQD"/>
+                                    <constraint firstAttribute="height" constant="100" id="jf1-HM-S1t"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4R-Py-CJu">
+                                <rect key="frame" x="130" y="60" width="135" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="AccentColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="color_cell_bg"/>
+                        <constraints>
+                            <constraint firstItem="e4R-Py-CJu" firstAttribute="leading" secondItem="94L-So-tGF" secondAttribute="trailing" constant="15" id="M4I-ki-jFn"/>
+                            <constraint firstItem="e4R-Py-CJu" firstAttribute="centerY" secondItem="94L-So-tGF" secondAttribute="centerY" id="OZO-a2-Mhn"/>
+                            <constraint firstItem="94L-So-tGF" firstAttribute="leading" secondItem="4bb-3J-0pG" secondAttribute="leading" constant="15" id="UHT-WH-mp7"/>
+                            <constraint firstItem="94L-So-tGF" firstAttribute="top" secondItem="4bb-3J-0pG" secondAttribute="top" constant="10" id="mxd-5f-Iv3"/>
+                            <constraint firstAttribute="bottom" secondItem="94L-So-tGF" secondAttribute="bottom" constant="10" id="orJ-L7-KDh"/>
+                            <constraint firstAttribute="trailing" secondItem="e4R-Py-CJu" secondAttribute="trailing" constant="15" id="u0M-3Z-aNh"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="15"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" name="color_bg"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4bb-3J-0pG" secondAttribute="bottom" constant="10" id="23s-Ft-38T"/>
+                    <constraint firstItem="4bb-3J-0pG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Vs1-Ws-Zfg"/>
+                    <constraint firstItem="4bb-3J-0pG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="Wyb-xp-jdB"/>
+                    <constraint firstAttribute="trailing" secondItem="4bb-3J-0pG" secondAttribute="trailing" constant="20" id="cim-nI-DCt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="color_bg"/>
+            <connections>
+                <outlet property="ivItem" destination="94L-So-tGF" id="AS3-WQ-cgS"/>
+                <outlet property="lblName" destination="e4R-Py-CJu" id="fgf-Gt-bsy"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="148.99553571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_bg">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_cell_bg">
+            <color red="0.76078431372549016" green="0.76078431372549016" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="color_yellow">
+            <color red="0.8917436004" green="0.79749685530000003" blue="0.28611618280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>
