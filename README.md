@@ -12,3 +12,5 @@ Podlist
 - SwinjectAutoregistration
 - RealmSwift
 - Unrealm
+
+<b>Do not forget to call pod install before building project! </b>
