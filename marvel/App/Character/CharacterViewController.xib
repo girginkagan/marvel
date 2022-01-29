@@ -27,32 +27,32 @@
                     <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SyX-9J-r9H">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="703"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="720.5"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kZj-jW-vj0">
-                                    <rect key="frame" x="0.0" y="118" width="414" height="257"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="375"/>
                                     <color key="backgroundColor" name="color_yellow"/>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTX-UN-7Fw">
                                     <rect key="frame" x="20" y="395" width="374" height="0.0"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="textColor" name="AccentColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UaS-SJ-Jf5">
-                                    <rect key="frame" x="20" y="400" width="374" height="0.0"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <rect key="frame" x="20" y="405" width="374" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                     <color key="textColor" name="AccentColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Comics" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYf-3e-GTe">
-                                    <rect key="frame" x="20" y="430" width="374" height="23"/>
-                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                    <rect key="frame" x="20" y="445" width="374" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                     <color key="textColor" name="AccentColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0zZ-uG-mVW">
-                                    <rect key="frame" x="0.0" y="463" width="414" height="210"/>
+                                    <rect key="frame" x="0.0" y="480.5" width="414" height="210"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="210" id="qul-s5-vm1"/>
@@ -67,7 +67,7 @@
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
-                                <constraint firstItem="0zZ-uG-mVW" firstAttribute="top" secondItem="FYf-3e-GTe" secondAttribute="bottom" constant="10" id="0MS-BZ-w40"/>
+                                <constraint firstItem="0zZ-uG-mVW" firstAttribute="top" secondItem="FYf-3e-GTe" secondAttribute="bottom" constant="15" id="0MS-BZ-w40"/>
                                 <constraint firstAttribute="trailing" secondItem="0zZ-uG-mVW" secondAttribute="trailing" id="1Od-BG-mdr"/>
                                 <constraint firstAttribute="bottom" secondItem="0zZ-uG-mVW" secondAttribute="bottom" constant="30" id="8eN-p3-dt3"/>
                                 <constraint firstAttribute="trailing" secondItem="kZj-jW-vj0" secondAttribute="trailing" id="FZj-Dj-Y0Y"/>
@@ -77,8 +77,8 @@
                                 <constraint firstItem="kZj-jW-vj0" firstAttribute="leading" secondItem="SyX-9J-r9H" secondAttribute="leading" id="OrD-sG-337"/>
                                 <constraint firstItem="UaS-SJ-Jf5" firstAttribute="leading" secondItem="SyX-9J-r9H" secondAttribute="leading" constant="20" id="Pcu-gX-iAd"/>
                                 <constraint firstAttribute="trailing" secondItem="UaS-SJ-Jf5" secondAttribute="trailing" constant="20" id="S6N-dv-5TN"/>
-                                <constraint firstItem="FYf-3e-GTe" firstAttribute="top" secondItem="UaS-SJ-Jf5" secondAttribute="bottom" constant="30" id="VtD-2p-pSd"/>
-                                <constraint firstItem="UaS-SJ-Jf5" firstAttribute="top" secondItem="oTX-UN-7Fw" secondAttribute="bottom" constant="5" id="ZJq-dX-aLi"/>
+                                <constraint firstItem="FYf-3e-GTe" firstAttribute="top" secondItem="UaS-SJ-Jf5" secondAttribute="bottom" constant="40" id="VtD-2p-pSd"/>
+                                <constraint firstItem="UaS-SJ-Jf5" firstAttribute="top" secondItem="oTX-UN-7Fw" secondAttribute="bottom" constant="10" id="ZJq-dX-aLi"/>
                                 <constraint firstItem="FYf-3e-GTe" firstAttribute="leading" secondItem="SyX-9J-r9H" secondAttribute="leading" constant="20" id="ha5-yo-KxB"/>
                                 <constraint firstItem="0zZ-uG-mVW" firstAttribute="leading" secondItem="SyX-9J-r9H" secondAttribute="leading" id="kdd-Q9-YpK"/>
                                 <constraint firstItem="oTX-UN-7Fw" firstAttribute="leading" secondItem="SyX-9J-r9H" secondAttribute="leading" constant="20" id="nNw-ps-Idv"/>
@@ -118,7 +118,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="color_yellow">
-            <color red="0.8917436004" green="0.79749685530000003" blue="0.28611618280000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.89200001955032349" green="0.79699999094009399" blue="0.28600001335144043" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

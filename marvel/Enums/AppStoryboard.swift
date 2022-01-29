@@ -11,4 +11,5 @@ enum AppStoryboard: String {
     case Splash = "SplashViewController"
     case Home = "HomeViewController"
     case Character = "CharacterViewController"
+    case Favorites = "FavoritesViewController"
 }

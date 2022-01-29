@@ -29,7 +29,7 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     private func setUI() {
-        let barButtonFavorite = UIBarButtonItem(image: UIImage(named: "ic_favorite_filled"), style: .plain, target: self, action: #selector(didTapBarButtonFavorite))
+        let barButtonFavorite = UIBarButtonItem(title: "Favorites", style: .plain, target: self, action: #selector(didTapBarButtonFavorite))
         let barButtonLogo = UIBarButtonItem(image: UIImage(named: "ic_logo_titleview"), style: .plain, target: self, action: #selector(didTapBarButtonLogo))
         navigationItem.rightBarButtonItem = barButtonFavorite
         navigationItem.leftBarButtonItem = barButtonLogo
@@ -62,7 +62,7 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     @objc private func didTapBarButtonFavorite() {
-        print("tapped")
+        viewModel?.coordinator?.presentFavorites()
     }
     
     @objc private func didTapBarButtonLogo() {

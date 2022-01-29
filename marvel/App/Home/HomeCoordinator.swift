@@ -29,4 +29,9 @@ class HomeCoordinator: BaseCoordinator {
         start(coordinator: coordinator)
         (navigationController.viewControllers.last as? CharacterViewController)?.data = character
     }
+    
+    func presentFavorites() {
+        let coordinator = AppDelegate.container.resolve(FavoritesCoordinator.self)!
+        start(coordinator: coordinator)
+    }
 }

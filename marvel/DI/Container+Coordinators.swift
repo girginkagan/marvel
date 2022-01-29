@@ -14,5 +14,6 @@ extension Container {
         autoregister(SplashCoordinator.self, initializer: SplashCoordinator.init)
         autoregister(HomeCoordinator.self, initializer: HomeCoordinator.init)
         autoregister(CharacterCoordinator.self, initializer: CharacterCoordinator.init)
+        autoregister(FavoritesCoordinator.self, initializer: FavoritesCoordinator.init)
     }
 }

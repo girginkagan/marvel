@@ -9,4 +9,9 @@ import UIKit
 
 class BaseViewModel {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    let realmUtl = RealmUtil()
+    
+    init() {
+        appDelegate.resultFavorites.accept(realmUtl.getFavorites())
+    }
 }

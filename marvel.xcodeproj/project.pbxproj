@@ -58,6 +58,12 @@
 		77EB5F9B27A5AB34000C8495 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5F9927A5AB34000C8495 /* LoadingTableViewCell.swift */; };
 		77EB5F9C27A5AB34000C8495 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EB5F9A27A5AB34000C8495 /* LoadingTableViewCell.xib */; };
 		77EB5F9F27A5B69B000C8495 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77EB5F9E27A5B69A000C8495 /* GoogleService-Info.plist */; };
+		77EB5FA327A5B881000C8495 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5FA127A5B881000C8495 /* FavoritesViewController.swift */; };
+		77EB5FA427A5B881000C8495 /* FavoritesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EB5FA227A5B881000C8495 /* FavoritesViewController.xib */; };
+		77EB5FA627A5B892000C8495 /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5FA527A5B892000C8495 /* FavoritesViewModel.swift */; };
+		77EB5FA827A5B89B000C8495 /* FavoritesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5FA727A5B89B000C8495 /* FavoritesCoordinator.swift */; };
+		77EB5FAB27A5BC13000C8495 /* FavoritesTableViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5FAA27A5BC13000C8495 /* FavoritesTableViewSource.swift */; };
+		77EB5FAD27A5BD53000C8495 /* RealmUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5FAC27A5BD53000C8495 /* RealmUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +122,12 @@
 		77EB5F9927A5AB34000C8495 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingTableViewCell.swift; path = marvel/Extensions/LoadingTableViewCell.swift; sourceTree = SOURCE_ROOT; };
 		77EB5F9A27A5AB34000C8495 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingTableViewCell.xib; path = marvel/Extensions/LoadingTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		77EB5F9E27A5B69A000C8495 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		77EB5FA127A5B881000C8495 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewController.swift; path = marvel/Extensions/FavoritesViewController.swift; sourceTree = SOURCE_ROOT; };
+		77EB5FA227A5B881000C8495 /* FavoritesViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = FavoritesViewController.xib; path = marvel/Extensions/FavoritesViewController.xib; sourceTree = SOURCE_ROOT; };
+		77EB5FA527A5B892000C8495 /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesViewModel.swift; path = marvel/Extensions/FavoritesViewModel.swift; sourceTree = SOURCE_ROOT; };
+		77EB5FA727A5B89B000C8495 /* FavoritesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesCoordinator.swift; path = marvel/Extensions/FavoritesCoordinator.swift; sourceTree = SOURCE_ROOT; };
+		77EB5FAA27A5BC13000C8495 /* FavoritesTableViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FavoritesTableViewSource.swift; path = marvel/Extensions/FavoritesTableViewSource.swift; sourceTree = SOURCE_ROOT; };
+		77EB5FAC27A5BD53000C8495 /* RealmUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmUtil.swift; sourceTree = "<group>"; };
 		9E85DFA2B08401207096D280 /* Pods-marvel.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel.prod debug.xcconfig"; path = "Target Support Files/Pods-marvel/Pods-marvel.prod debug.xcconfig"; sourceTree = "<group>"; };
 		C7E6EAE9A139F2EC400F79F8 /* Pods-marvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel.debug.xcconfig"; path = "Target Support Files/Pods-marvel/Pods-marvel.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FB0FA2991C8AF75056B110 /* Pods-marvel.dev debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel.dev debug.xcconfig"; path = "Target Support Files/Pods-marvel/Pods-marvel.dev debug.xcconfig"; sourceTree = "<group>"; };
@@ -191,6 +203,7 @@
 				77EB5F2E27A4346F000C8495 /* Splash */,
 				77EB5F3F27A4366E000C8495 /* Home */,
 				77EB5F7827A57B2F000C8495 /* Character */,
+				77EB5FA027A5B865000C8495 /* Favorites */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -198,6 +211,7 @@
 		77EB5F2427A433DC000C8495 /* TableViewSources */ = {
 			isa = PBXGroup;
 			children = (
+				77EB5FA927A5BBF8000C8495 /* Favorites */,
 				77EB5F7327A571B1000C8495 /* Home */,
 			);
 			path = TableViewSources;
@@ -319,6 +333,7 @@
 				77EB5F6A27A440D4000C8495 /* APIErrorGenerator.swift */,
 				77EB5F6F27A44965000C8495 /* BridgingHeader.h */,
 				77EB5F8F27A59725000C8495 /* DefaultUtil.swift */,
+				77EB5FAC27A5BD53000C8495 /* RealmUtil.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -420,6 +435,25 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		77EB5FA027A5B865000C8495 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				77EB5FA127A5B881000C8495 /* FavoritesViewController.swift */,
+				77EB5FA527A5B892000C8495 /* FavoritesViewModel.swift */,
+				77EB5FA727A5B89B000C8495 /* FavoritesCoordinator.swift */,
+				77EB5FA227A5B881000C8495 /* FavoritesViewController.xib */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
+		77EB5FA927A5BBF8000C8495 /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				77EB5FAA27A5BC13000C8495 /* FavoritesTableViewSource.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		887EF3F28947AB5F2F7B157B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +535,7 @@
 				77EB5F1A27A42131000C8495 /* LaunchScreen.storyboard in Resources */,
 				77EB5F3227A43487000C8495 /* SplashViewController.xib in Resources */,
 				77EB5F1727A42131000C8495 /* Assets.xcassets in Resources */,
+				77EB5FA427A5B881000C8495 /* FavoritesViewController.xib in Resources */,
 				77EB5F4327A43686000C8495 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +592,7 @@
 				77EB5F5427A438E5000C8495 /* BaseRequest.swift in Sources */,
 				77EB5F2327A433B3000C8495 /* AppCoordinator.swift in Sources */,
 				77EB5F3927A434EE000C8495 /* Container+Services.swift in Sources */,
+				77EB5FA627A5B892000C8495 /* FavoritesViewModel.swift in Sources */,
 				77EB5F4B27A436E8000C8495 /* HomeCoordinator.swift in Sources */,
 				77EB5F4927A436E0000C8495 /* HomeViewModel.swift in Sources */,
 				77EB5F8827A58EE0000C8495 /* ComicCollectionViewSource.swift in Sources */,
@@ -570,8 +606,10 @@
 				77EB5F6B27A440D4000C8495 /* APIErrorGenerator.swift in Sources */,
 				77EB5F3727A434CB000C8495 /* Container+ViewModels.swift in Sources */,
 				77EB5F5627A43903000C8495 /* GetCharactersApiRequest.swift in Sources */,
+				77EB5FA327A5B881000C8495 /* FavoritesViewController.swift in Sources */,
 				77EB5F7E27A57B7B000C8495 /* CharacterViewModel.swift in Sources */,
 				77EB5F6027A43F06000C8495 /* AppStoryboard.swift in Sources */,
+				77EB5FAB27A5BC13000C8495 /* FavoritesTableViewSource.swift in Sources */,
 				77EB5F0E27A4212E000C8495 /* AppDelegate.swift in Sources */,
 				77EB5F9B27A5AB34000C8495 /* LoadingTableViewCell.swift in Sources */,
 				77EB5F4E27A43824000C8495 /* IServiceHandler.swift in Sources */,
@@ -588,10 +626,12 @@
 				77EB5F6427A43F2B000C8495 /* APIStatusCodes.swift in Sources */,
 				77EB5F6227A43F18000C8495 /* APIErrors.swift in Sources */,
 				77EB5F8E27A596D0000C8495 /* ComicsResponseModel.swift in Sources */,
+				77EB5FAD27A5BD53000C8495 /* RealmUtil.swift in Sources */,
 				77EB5F2D27A4343B000C8495 /* BaseViewModel.swift in Sources */,
 				77EB5F4227A43686000C8495 /* HomeViewController.swift in Sources */,
 				77EB5F6727A43F58000C8495 /* ViewControllerUtil.swift in Sources */,
 				77EB5F9027A59725000C8495 /* DefaultUtil.swift in Sources */,
+				77EB5FA827A5B89B000C8495 /* FavoritesCoordinator.swift in Sources */,
 				77EB5F9527A598DD000C8495 /* Date+toString.swift in Sources */,
 				77EB5F7627A571C8000C8495 /* HomeCharacterTableViewCell.swift in Sources */,
 				77EB5F3E27A43659000C8495 /* Storyboarded.swift in Sources */,

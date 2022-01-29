@@ -7,7 +7,6 @@
 
 import UIKit
 import RxSwift
-import SVProgressHUD
 
 class CharacterViewController: UIViewController, Storyboarded {
     static var storyboard = AppStoryboard.Character
@@ -29,9 +28,6 @@ class CharacterViewController: UIViewController, Storyboarded {
     }
     
     private func setUI() {
-        let barButtonFavorite = UIBarButtonItem(image: UIImage(named: "ic_favorite"), style: .plain, target: self, action: #selector(didTapBarButtonFavorite))
-        navigationItem.rightBarButtonItem = barButtonFavorite
-        
         if let path = data?.thumbnail?.path, let ext = data?.thumbnail?.thumbnailExtension {
             ivItem.kf.setImage(with: URL(string: path.replacingOccurrences(of: "http", with: "https") + "." + ext))
         } else {
@@ -51,9 +47,18 @@ class CharacterViewController: UIViewController, Storyboarded {
         viewModel.isError
             .bind { [weak self] data in
                 if let errorData = data {
-                    SVProgressHUD.dismiss()
                     guard let self = self else { return }
                     AlertUtil.showStandardAlert(parentController: self, title: "Error", message: APIErrorGenerator().generateError(error: errorData))
+                }
+            }
+            .disposed(by: disposeBag)
+        
+        viewModel.isFavorite
+            .bind { [weak self] data in
+                if let isFavorite = data {
+                    guard let self = self else { return }
+                    let barButtonFavorite = UIBarButtonItem(image: UIImage(named: isFavorite ? "ic_favorite_filled" : "ic_favorite"), style: .plain, target: self, action: #selector(self.didTapBarButtonFavorite))
+                    self.navigationItem.rightBarButtonItem = barButtonFavorite
                 }
             }
             .disposed(by: disposeBag)
@@ -62,12 +67,11 @@ class CharacterViewController: UIViewController, Storyboarded {
             return
         }
 
-        SVProgressHUD.show()
         viewModel.setBindings(collectionViewInputDelegate: self, data: data)
     }
     
     @objc private func didTapBarButtonFavorite() {
-        print("tapped fav btn")
+        viewModel?.favoriteCharacter(data: data)
     }
 }
 
@@ -76,7 +80,5 @@ extension CharacterViewController: ComicCollectionViewInput {
         cvComics.dataSource = source
         cvComics.delegate = source
         cvComics.reloadData()
-        
-        SVProgressHUD.dismiss()
     }
 }

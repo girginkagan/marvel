@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Unrealm
 
 // MARK: - CharactersResponseModel
 struct CharactersResponseModel: Codable {
@@ -19,62 +20,33 @@ struct DataClass: Codable {
 }
 
 // MARK: - Result
-struct CharacterResult: Codable {
-    let id: Int?
-    let name, resultDescription: String?
-    let thumbnail: Thumbnail?
-    let comics, series: Comics?
-    let stories: Stories?
-    let events: Comics?
+struct CharacterResult: Codable, Realmable {
+    var id: Int?
+    var name, resultDescription: String?
+    var thumbnail: Thumbnail?
 
     enum CodingKeys: String, CodingKey {
         case id, name
         case resultDescription = "description"
-        case thumbnail, comics, series, stories, events
+        case thumbnail
+    }
+    
+    static func primaryKey() -> String? {
+        return "id"
     }
 }
 
-// MARK: - Comics
-struct Comics: Codable {
-    let available: Int?
-    let collectionURI: String?
-    let items: [ComicsItem]?
-    let returned: Int?
-}
-
-// MARK: - ComicsItem
-struct ComicsItem: Codable {
-    let resourceURI: String?
-    let name: String?
-}
-
-// MARK: - Stories
-struct Stories: Codable {
-    let available: Int?
-    let collectionURI: String?
-    let items: [StoriesItem]?
-    let returned: Int?
-}
-
-// MARK: - StoriesItem
-struct StoriesItem: Codable {
-    let resourceURI: String?
-    let name, type: String?
-}
-
 // MARK: - Thumbnail
-struct Thumbnail: Codable {
-    let path: String?
-    let thumbnailExtension: String?
+struct Thumbnail: Codable, Realmable {
+    var path: String?
+    var thumbnailExtension: String?
 
     enum CodingKeys: String, CodingKey {
         case path
         case thumbnailExtension = "extension"
     }
-}
-
-// MARK: - URLElement
-struct URLElement: Codable {
-    let type: String?
-    let url: String?
+    
+    static func primaryKey() -> String? {
+        return "path"
+    }
 }

@@ -18,6 +18,7 @@ final class CharacterViewModel: BaseViewModel {
     let disposeBag = DisposeBag()
     var collectionViewSource = BehaviorRelay<ComicCollectionViewSource?>(value: nil)
     let isError = BehaviorRelay<BaseModelError?>(value: nil)
+    let isFavorite = BehaviorRelay<Bool?>(value: nil)
     var collectionViewInputDelegate: ComicCollectionViewInput?
     
     init(services: RestClient) {
@@ -33,6 +34,10 @@ final class CharacterViewModel: BaseViewModel {
             }
         }.disposed(by: disposeBag)
         
+        appDelegate.resultFavorites.asObservable()
+            .map { $0?.contains(where: {$0.id == data.id}) }.bind(to: isFavorite)
+            .disposed(by: disposeBag)
+        
         getComics(data: data)
     }
     
@@ -42,5 +47,18 @@ final class CharacterViewModel: BaseViewModel {
         } errorCompletion: { [weak self] error in
             self?.isError.accept(error)
         }
+    }
+    
+    func favoriteCharacter(data: CharacterResult?) {
+        guard let data = data else {
+            return
+        }
+
+        if isFavorite.value ?? false {
+            realmUtl.setUnFavorite(data: data)
+        } else {
+            realmUtl.setFavorite(data: data)
+        }
+        appDelegate.resultFavorites.accept(realmUtl.getFavorites())
     }
 }

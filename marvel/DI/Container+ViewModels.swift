@@ -13,5 +13,6 @@ extension Container {
         autoregister(SplashViewModel.self, initializer: SplashViewModel.init)
         autoregister(HomeViewModel.self, initializer: HomeViewModel.init)
         autoregister(CharacterViewModel.self, initializer: CharacterViewModel.init)
+        autoregister(FavoritesViewModel.self, initializer: FavoritesViewModel.init)
     }
 }

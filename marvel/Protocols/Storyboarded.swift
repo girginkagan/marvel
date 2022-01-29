@@ -25,6 +25,9 @@ extension Storyboarded {
         case AppStoryboard.Character.rawValue:
             let viewController = CharacterViewController(nibName: identifier, bundle: nil) as! Self
             return viewController
+        case AppStoryboard.Favorites.rawValue:
+            let viewController = FavoritesViewController(nibName: identifier, bundle: nil) as! Self
+            return viewController
         default:
             let viewController = SplashViewController(nibName: identifier, bundle: nil) as! Self
             return viewController
