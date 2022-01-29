@@ -55,6 +55,8 @@
 		77EB5F9227A59756000C8495 /* GetComicsByCharacterApiRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5F9127A59756000C8495 /* GetComicsByCharacterApiRequest.swift */; };
 		77EB5F9527A598DD000C8495 /* Date+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5F9427A598DD000C8495 /* Date+toString.swift */; };
 		77EB5F9727A59926000C8495 /* String+dateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5F9627A59926000C8495 /* String+dateFormatter.swift */; };
+		77EB5F9B27A5AB34000C8495 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77EB5F9927A5AB34000C8495 /* LoadingTableViewCell.swift */; };
+		77EB5F9C27A5AB34000C8495 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77EB5F9A27A5AB34000C8495 /* LoadingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +112,8 @@
 		77EB5F9127A59756000C8495 /* GetComicsByCharacterApiRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetComicsByCharacterApiRequest.swift; sourceTree = "<group>"; };
 		77EB5F9427A598DD000C8495 /* Date+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+toString.swift"; sourceTree = "<group>"; };
 		77EB5F9627A59926000C8495 /* String+dateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+dateFormatter.swift"; sourceTree = "<group>"; };
+		77EB5F9927A5AB34000C8495 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoadingTableViewCell.swift; path = marvel/Extensions/LoadingTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		77EB5F9A27A5AB34000C8495 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = LoadingTableViewCell.xib; path = marvel/Extensions/LoadingTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		9E85DFA2B08401207096D280 /* Pods-marvel.prod debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel.prod debug.xcconfig"; path = "Target Support Files/Pods-marvel/Pods-marvel.prod debug.xcconfig"; sourceTree = "<group>"; };
 		C7E6EAE9A139F2EC400F79F8 /* Pods-marvel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel.debug.xcconfig"; path = "Target Support Files/Pods-marvel/Pods-marvel.debug.xcconfig"; sourceTree = "<group>"; };
 		D7FB0FA2991C8AF75056B110 /* Pods-marvel.dev debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-marvel.dev debug.xcconfig"; path = "Target Support Files/Pods-marvel/Pods-marvel.dev debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		77EB5F2527A433E4000C8495 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				77EB5F9827A5AB0E000C8495 /* Common */,
 				77EB5F7227A571AD000C8495 /* Home */,
 			);
 			path = TableViewCells;
@@ -395,6 +400,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		77EB5F9827A5AB0E000C8495 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				77EB5F9927A5AB34000C8495 /* LoadingTableViewCell.swift */,
+				77EB5F9A27A5AB34000C8495 /* LoadingTableViewCell.xib */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		887EF3F28947AB5F2F7B157B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -470,6 +484,7 @@
 			files = (
 				77EB5F7C27A57B50000C8495 /* CharacterViewController.xib in Resources */,
 				77EB5F7727A571C8000C8495 /* HomeCharacterTableViewCell.xib in Resources */,
+				77EB5F9C27A5AB34000C8495 /* LoadingTableViewCell.xib in Resources */,
 				77EB5F8C27A58F56000C8495 /* ComicCollectionViewCell.xib in Resources */,
 				77EB5F1A27A42131000C8495 /* LaunchScreen.storyboard in Resources */,
 				77EB5F3227A43487000C8495 /* SplashViewController.xib in Resources */,
@@ -546,6 +561,7 @@
 				77EB5F7E27A57B7B000C8495 /* CharacterViewModel.swift in Sources */,
 				77EB5F6027A43F06000C8495 /* AppStoryboard.swift in Sources */,
 				77EB5F0E27A4212E000C8495 /* AppDelegate.swift in Sources */,
+				77EB5F9B27A5AB34000C8495 /* LoadingTableViewCell.swift in Sources */,
 				77EB5F4E27A43824000C8495 /* IServiceHandler.swift in Sources */,
 				77EB5F2A27A43422000C8495 /* BaseModelError.swift in Sources */,
 				77EB5F7B27A57B50000C8495 /* CharacterViewController.swift in Sources */,

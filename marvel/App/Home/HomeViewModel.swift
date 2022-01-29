@@ -10,6 +10,7 @@ import RxCocoa
 
 protocol HomeTableViewOutput {
     func onCharacterTapped(character: CharacterResult)
+    func getNextPage()
 }
 
 protocol HomeTableViewInput {
@@ -23,6 +24,8 @@ final class HomeViewModel: BaseViewModel {
     var tableViewSource = BehaviorRelay<HomeTableViewSource?>(value: nil)
     let disposeBag = DisposeBag()
     var tableViewInputDelegate: HomeTableViewInput?
+    let isError = BehaviorSubject<BaseModelError?>(value: nil)
+    var page = 1
     
     init(services: RestClient) {
         self.services = services
@@ -40,6 +43,7 @@ final class HomeViewModel: BaseViewModel {
         appDelegate.resultCharacters.subscribe { [weak self] _ in
             if self?.tableViewSource.value != nil {
                 self?.tableViewInputDelegate?.onReloadTableView()
+                self?.tableViewSource.value?.isLoadingList = false
             } else {
                 self?.tableViewSource.accept(HomeTableViewSource(data: self?.appDelegate.resultCharacters.value?.data?.results ?? [], delegate: self!))
             }
@@ -50,5 +54,24 @@ final class HomeViewModel: BaseViewModel {
 extension HomeViewModel: HomeTableViewOutput {
     func onCharacterTapped(character: CharacterResult) {
         coordinator?.presentCharacterDetail(character: character)
+    }
+    
+    func getNextPage() {
+        services.getCharacters(offset: appDelegate.resultCharacters.value?.data?.results?.count ?? 0, successCompletion: { [weak self] success in
+            if (success.data?.results?.count ?? 0) < 30 {
+                self?.tableViewSource.value?.noMorePage = true
+            }
+            
+            if (success.data?.results?.count ?? 0) != 0 {
+                self?.page += 1
+            }
+            var newData = self?.appDelegate.resultCharacters.value
+            self?.tableViewSource.value?.data.append(contentsOf: success.data?.results ?? [])
+            newData?.data?.results?.append(contentsOf: success.data?.results ?? [])
+            
+            self?.appDelegate.resultCharacters.accept(newData)
+        }, errorCompletion: { [weak self] error in
+            self?.isError.onNext(error)
+        })
     }
 }
