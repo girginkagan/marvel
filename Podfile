@@ -7,12 +7,12 @@ target 'marvel' do
 
   pod 'RxSwift'
   pod 'RxCocoa'
-  pod 'Alamofire', '~> 5.4'
+  pod 'Alamofire', '5.5.0'
   pod 'SVProgressHUD'
   pod 'Kingfisher'
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
-  pod 'RealmSwift'
-  pod 'Unrealm'
+  pod 'RealmSwift', '10.22.0'
+  pod 'Unrealm', '1.9.4'
 
 end

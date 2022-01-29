@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - CharactersResponseModel
 struct CharactersResponseModel: Codable {
-    let data: DataClass?
+    var data: DataClass?
 }
 
 // MARK: - DataClass

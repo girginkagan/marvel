@@ -23,6 +23,7 @@ class SplashCoordinator: BaseCoordinator {
         viewModel.isReady.bind { [weak self] data in
             if data {
                 self?.presentMain()
+                self?.viewModel.isReady.dispose()
             }
         }.disposed(by: disposeBag)
         

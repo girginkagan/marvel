@@ -42,7 +42,7 @@ final class SplashViewController: UIViewController, Storyboarded {
         guard let viewModel = viewModel else { return }
         
         viewModel.setBindings()
-        viewModel.getRadios()
+        viewModel.getCharacters()
         
         viewModel.isError
             .bind { [weak self] data in

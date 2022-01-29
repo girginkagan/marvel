@@ -19,7 +19,7 @@ final class SplashViewModel: BaseViewModel {
         self.services = services
     }
     
-    func getRadios() {
+    func getCharacters() {
         services.getCharacters(offset: appDelegate.resultCharacters.value?.data?.results?.count ?? 0, successCompletion: { [weak self] success in
             self?.appDelegate.resultCharacters.accept(success)
         }, errorCompletion: { [weak self] error in

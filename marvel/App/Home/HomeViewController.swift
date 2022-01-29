@@ -6,10 +6,12 @@
 //
 
 import UIKit
+import RxSwift
 
 class HomeViewController: UIViewController, Storyboarded {
     static var storyboard = AppStoryboard.Home
     var viewModel: HomeViewModel?
+    let disposeBag = DisposeBag()
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,12 +29,21 @@ class HomeViewController: UIViewController, Storyboarded {
         navigationItem.leftBarButtonItem = barButtonLogo
         
         tableView.register(UINib(nibName: "HomeCharacterTableViewCell", bundle: nil), forCellReuseIdentifier: "HomeCharacterTableViewCell")
+        tableView.register(UINib(nibName: "LoadingTableViewCell", bundle: nil), forCellReuseIdentifier: "LoadingTableViewCell")
         tableView.contentInset = UIEdgeInsets(top: 10, left: 0, bottom: 20, right: 0)
     }
     
     private func setBindings() {
         guard let viewModel = viewModel else { return }
         
+        viewModel.isError
+            .bind { [weak self] data in
+                if let errorData = data {
+                    guard let self = self else { return }
+                    AlertUtil.showStandardAlert(parentController: self, title: "Error", message: APIErrorGenerator().generateError(error: errorData))
+                }
+            }
+            .disposed(by: disposeBag)
         viewModel.setBindings(tableViewInputDelegate: self)
     }
     
@@ -49,7 +60,7 @@ class HomeViewController: UIViewController, Storyboarded {
 
 extension HomeViewController: HomeTableViewInput {
     func onReloadTableView() {
-        tableView.reloadData()
+        self.tableView.reloadData()
     }
     
     func onTableViewReady(source: HomeTableViewSource?) {

@@ -23,15 +23,15 @@ PODS:
     - Runtime
 
 DEPENDENCIES:
-  - Alamofire (~> 5.4)
+  - Alamofire (= 5.5.0)
   - Kingfisher
-  - RealmSwift
+  - RealmSwift (= 10.22.0)
   - RxCocoa
   - RxSwift
   - SVProgressHUD
   - Swinject
   - SwinjectAutoregistration
-  - Unrealm
+  - Unrealm (= 1.9.4)
 
 SPEC REPOS:
   trunk:
@@ -62,6 +62,6 @@ SPEC CHECKSUMS:
   SwinjectAutoregistration: e83e362da3ca9c64a68290e89efbc40e378dff12
   Unrealm: 547a3e1432a86df5cff7b74927a60cc664cc2a0d
 
-PODFILE CHECKSUM: 10f1b32b4c4c7f401f580457865e2c2f1445381b
+PODFILE CHECKSUM: e52e33ea6f62c5aa2209c20cff0fd050d194c591
 
 COCOAPODS: 1.11.2
