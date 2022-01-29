@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Firebase
 
 class HomeViewController: UIViewController, Storyboarded {
     static var storyboard = AppStoryboard.Home
@@ -20,6 +21,11 @@ class HomeViewController: UIViewController, Storyboarded {
         
         setUI()
         setBindings()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        logEvent()
     }
     
     private func setUI() {
@@ -47,11 +53,19 @@ class HomeViewController: UIViewController, Storyboarded {
         viewModel.setBindings(tableViewInputDelegate: self)
     }
     
-    @objc func didTapBarButtonFavorite() {
+    private func logEvent() {
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: String(Date().timeIntervalSince1970),
+            AnalyticsParameterItemName: "Home",
+            AnalyticsParameterContentType: "cont",
+        ])
+    }
+    
+    @objc private func didTapBarButtonFavorite() {
         print("tapped")
     }
     
-    @objc func didTapBarButtonLogo() {
+    @objc private func didTapBarButtonLogo() {
         if tableView.numberOfRows(inSection: 0) > 0 {
             tableView.scrollToRow(at: IndexPath(row: 0, section: 0), at: .top, animated: true)
         }

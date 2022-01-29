@@ -14,5 +14,6 @@ target 'marvel' do
   pod 'SwinjectAutoregistration'
   pod 'RealmSwift', '10.22.0'
   pod 'Unrealm', '1.9.4'
+  pod 'Firebase/Analytics'
 
 end

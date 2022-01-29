@@ -66,7 +66,7 @@ class CharacterViewController: UIViewController, Storyboarded {
         viewModel.setBindings(collectionViewInputDelegate: self, data: data)
     }
     
-    @objc func didTapBarButtonFavorite() {
+    @objc private func didTapBarButtonFavorite() {
         print("tapped fav btn")
     }
 }

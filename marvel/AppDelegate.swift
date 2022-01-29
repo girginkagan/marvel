@@ -9,6 +9,7 @@ import UIKit
 import Swinject
 import RxCocoa
 import SVProgressHUD
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -27,6 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         SVProgressHUD.setBackgroundLayerColor(UIColor(red: 0, green: 0, blue: 0, alpha: 0.2))
         
         AppDelegate.container.registerDependencies()
+        FirebaseApp.configure()
         
         appCoordinator = AppDelegate.container.resolve(AppCoordinator.self)!
         appCoordinator.start()
